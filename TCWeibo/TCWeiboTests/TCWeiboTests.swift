@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import TCWeibo
 
 class TCWeiboTests: XCTestCase {
     

@@ -12,24 +12,61 @@ class HomeTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		visitorView?.setupVisitorInfo(true, imageName: "visitordiscover_feed_image_house", message: "关注一些人，回这里看看有什么惊喜")
 		
+		if !userLogin
+		{
+			visitorView?.setupVisitorInfo(true, imageName: "visitordiscover_feed_image_house", message: "关注一些人，回这里看看有什么惊喜")
+			return
+		}
+		
+		setupNav()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 	
+	
+	
+	let titleButton = TitleButton()
+	
+	// MARK: - Private Method
+	private func setupNav(){
+		navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_friendattention", target: self, action: "leftItemClick")
+		navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_pop", target: self, action: "rightItemClick")
+		
+		titleButton.setTitle("毛小伟 ", forState: UIControlState.Normal)
+		titleButton.addTarget(self, action: "titleBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
+		navigationItem.titleView = titleButton
+	
+	}
+	
+	// MARK: - Action
+	/** 导航栏 左按钮 点击事件  */
+	func leftItemClick(){
+		
+	}
+	
+	/** 导航栏 右按钮 点击事件  */
+	func rightItemClick(){
+		
+	}
+	
+	/** 导航栏 中间按钮 点击事件  */
+	func titleBtnClick(){
+		
+		UIView.animateWithDuration(0.5, animations: { () -> Void in
+			self.titleButton.imageView!.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+			})
+		
+	}
 
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 0
     }
 

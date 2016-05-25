@@ -20,6 +20,8 @@
 		96C1D0431CF188FB00C45693 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C1D0421CF188FB00C45693 /* DiscoverTableViewController.swift */; };
 		96C1D0451CF1890600C45693 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C1D0441CF1890600C45693 /* MessageTableViewController.swift */; };
 		96C1D0471CF1890E00C45693 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C1D0461CF1890E00C45693 /* ProfileTableViewController.swift */; };
+		96D453071CF54ECB003B3083 /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D453061CF54ECB003B3083 /* UIBarButtonItem+Category.swift */; };
+		96D453091CF54F83003B3083 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D453081CF54F83003B3083 /* TitleButton.swift */; };
 		9F9597C71242D5D29A94A654 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FADAF0CC44414DB249F12F2 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		96C1D0421CF188FB00C45693 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		96C1D0441CF1890600C45693 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		96C1D0461CF1890E00C45693 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		96D453061CF54ECB003B3083 /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
+		96D453081CF54F83003B3083 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		F73979B7ED5DDCBB60292AD2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +174,7 @@
 				96C1D0331CF1753000C45693 /* Message */,
 				96C1D0341CF1753000C45693 /* Profile */,
 				96C1D0351CF1753000C45693 /* Tools */,
+				96D453081CF54F83003B3083 /* TitleButton.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		96C1D02F1CF1753000C45693 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				96D453061CF54ECB003B3083 /* UIBarButtonItem+Category.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -424,10 +430,12 @@
 				96C1D0411CF188F400C45693 /* HomeTableViewController.swift in Sources */,
 				961FAE121CF35CEF00429120 /* BaseTableViewController.swift in Sources */,
 				96C1D0011CF1711000C45693 /* AppDelegate.swift in Sources */,
+				96D453091CF54F83003B3083 /* TitleButton.swift in Sources */,
 				96C1D0451CF1890600C45693 /* MessageTableViewController.swift in Sources */,
 				96C1D0431CF188FB00C45693 /* DiscoverTableViewController.swift in Sources */,
 				96C1D0371CF175B100C45693 /* MainTabBarController.swift in Sources */,
 				961FAE1F1CF42DE600429120 /* VisitorLoginView.swift in Sources */,
+				96D453071CF54ECB003B3083 /* UIBarButtonItem+Category.swift in Sources */,
 				96B55D4B1CF193DD0093830F /* NullViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
