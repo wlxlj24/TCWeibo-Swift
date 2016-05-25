@@ -49,8 +49,11 @@ class HomeTableViewController: BaseTableViewController {
 	
 	/** 导航栏 右按钮 点击事件  */
 	func rightItemClick(){
-		
+	
 	}
+	
+	///  转场动画代理
+	let popoverAnimatorDelegate = PopverAnimator()
 	
 	/** 导航栏 中间按钮 点击事件  */
 	func titleBtnClick(){
@@ -59,8 +62,22 @@ class HomeTableViewController: BaseTableViewController {
 			self.titleButton.imageView!.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
 			})
 		
+		if !userLogin{
+			return
+		}
+		titleButton.selected = !titleButton.selected
+		
+		let sb = UIStoryboard(name: "PopoverViewController", bundle: nil)
+		let popover = sb.instantiateViewControllerWithIdentifier("PopoverController") as! PopoverViewController
+		// 设置转场动画代理
+		popover.transitioningDelegate = popoverAnimatorDelegate
+		// 设置 Modal 展现样式
+		popover.modalPresentationStyle = UIModalPresentationStyle.Custom
+		
+		presentViewController(popover, animated: true, completion: nil)
+		
 	}
-
+	
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 0
@@ -126,3 +143,6 @@ class HomeTableViewController: BaseTableViewController {
     */
 
 }
+
+
+
