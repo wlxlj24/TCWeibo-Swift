@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QRCodeViewController: UIViewController {
 
@@ -48,6 +49,29 @@ class QRCodeViewController: UIViewController {
 	}
 
 	
+	// MARK: - Setup
+	/** 初始化会话  */
+	private func setupSession(){
+		
+		if !session.canAddInput(inputDevice){
+			return
+		}
+		if !session.canAddOutput(outputData){
+			return
+		}
+		
+		// 3. 添加设备
+		session.addInput(inputDevice)
+		session.addOutput(outputData)
+		print(outputData.availableMetadataObjectTypes)
+		
+		// 4. 设置扫描数据类型
+		outputData.metadataObjectTypes = outputData.availableMetadataObjectTypes
+		// 5. 设置输出代理
+		outputData.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+		
+	}
+	
 	// MARK: - Private Method
 	/** 冲击波动画  */
 	private func scanAnimation(){
@@ -65,7 +89,52 @@ class QRCodeViewController: UIViewController {
 		
 	}
 	
+	/** 开始扫描  */
+	private func startScan(){
+		session.startRunning()
+	}
+	
+	/** 设置图层  */
+	private func setupLayer(){
+		previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+		previewLayer.frame = view.bounds
+		view.layer.insertSublayer(previewLayer, atIndex: 0)
+	}
+	
+	// MARK: - Lazy
+	/** 拍摄会话  */
+	lazy var session : AVCaptureSession = {
+		return AVCaptureSession()
+	}()
+	
+	/** 输入设备  */
+	lazy var inputDevice : AVCaptureDeviceInput? = {
+		let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+		do {
+			return try AVCaptureDeviceInput(device: device)
+		}catch{
+			print(error)
+			return nil
+		}
+	}()
+	
+	/** 数据输出  */
+	lazy var outputData:AVCaptureMetadataOutput = {
+		return AVCaptureMetadataOutput()
+	}()
+	
+	/** 预览图层  */
+	lazy var previewLayer: AVCaptureVideoPreviewLayer = {
+		return AVCaptureVideoPreviewLayer(session: self.session)
+	}()
+	
+	
 }
+
+extension QRCodeViewController:AVCaptureMetadataOutputObjectsDelegate{
+	
+}
+
 
 extension QRCodeViewController:UITabBarDelegate{
 	
