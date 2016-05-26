@@ -23,12 +23,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DxF-Ym-I6E">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopupCell" id="A5n-QY-DW4">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A5n-QY-DW4" id="nAg-wD-lRW">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -41,7 +43,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h4X-3U-2BE" firstAttribute="top" secondItem="oOO-hf-Hxh" secondAttribute="bottom" id="5VX-7k-RG4"/>
                             <constraint firstItem="a0C-pn-WEa" firstAttribute="top" secondItem="DxF-Ym-I6E" secondAttribute="bottom" id="67q-aW-ctq">
@@ -66,14 +68,14 @@
                                 <exclude reference="DxF-Ym-I6E"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5VX-7k-RG4"/>
-                                <exclude reference="JRg-vx-VSF"/>
-                                <exclude reference="v1t-UX-wbc"/>
+                                <exclude reference="67q-aW-ctq"/>
+                                <exclude reference="U6m-HL-6s7"/>
                                 <exclude reference="REC-be-w03"/>
                                 <exclude reference="WaX-19-9yr"/>
                                 <exclude reference="Zwb-QT-fuc"/>
-                                <exclude reference="67q-aW-ctq"/>
-                                <exclude reference="U6m-HL-6s7"/>
+                                <exclude reference="5VX-7k-RG4"/>
+                                <exclude reference="JRg-vx-VSF"/>
+                                <exclude reference="v1t-UX-wbc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -82,14 +84,14 @@
                                 <include reference="DxF-Ym-I6E"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5VX-7k-RG4"/>
-                                <include reference="JRg-vx-VSF"/>
-                                <include reference="v1t-UX-wbc"/>
+                                <include reference="67q-aW-ctq"/>
+                                <include reference="U6m-HL-6s7"/>
                                 <include reference="REC-be-w03"/>
                                 <include reference="WaX-19-9yr"/>
                                 <include reference="Zwb-QT-fuc"/>
-                                <include reference="67q-aW-ctq"/>
-                                <include reference="U6m-HL-6s7"/>
+                                <include reference="5VX-7k-RG4"/>
+                                <include reference="JRg-vx-VSF"/>
+                                <include reference="v1t-UX-wbc"/>
                             </mask>
                         </variation>
                     </view>

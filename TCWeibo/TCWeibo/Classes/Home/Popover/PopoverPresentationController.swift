@@ -37,7 +37,7 @@ class PopoverPresentationController: UIPresentationController {
 	func clickDummingView(){
 		presentedViewController.dismissViewControllerAnimated(true, completion: nil)
 	}
-	
+	//!!!:
 	/** 遮罩View  */
 	lazy var dummingView: UIView = {
 		let v = UIView()

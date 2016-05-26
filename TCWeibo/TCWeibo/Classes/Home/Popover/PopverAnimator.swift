@@ -43,7 +43,7 @@ class PopverAnimator: NSObject , UIViewControllerTransitioningDelegate, UIViewCo
 		if isPresenting {
 			let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
 			transitionContext.containerView()!.addSubview(toView)
-			toView.transform = CGAffineTransformMakeScale(1.0, 0)
+			toView.transform = CGAffineTransformMakeScale(1.0, 0.00001)
 			toView.layer.anchorPoint = CGPointMake(0.5, 0)
 			
 			UIView.animateWithDuration(transitionDuration(transitionContext),

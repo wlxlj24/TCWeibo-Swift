@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCWeibo/Classes/Home/HomeTableViewController.swift"
-            timestampString = "485853865.028601"
+            timestampString = "485860237.725187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "titleBtnClick()"
             landmarkType = "5">
             <Locations>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCWeibo/Classes/Home/HomeTableViewController.swift"
-            timestampString = "485848871.589625"
+            timestampString = "485860237.725187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "rightItemClick()"
             landmarkType = "5">
          </BreakpointContent>

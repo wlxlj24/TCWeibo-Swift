@@ -41,6 +41,12 @@ class HomeTableViewController: BaseTableViewController {
 	
 	}
 	
+	func scanQRCode(){
+		let sb = UIStoryboard(name: "QRCode", bundle: nil).instantiateInitialViewController() as! UINavigationController
+		presentViewController(sb, animated: true, completion: nil)
+	}
+	
+	
 	// MARK: - Action
 	/** 导航栏 左按钮 点击事件  */
 	func leftItemClick(){
@@ -49,7 +55,7 @@ class HomeTableViewController: BaseTableViewController {
 	
 	/** 导航栏 右按钮 点击事件  */
 	func rightItemClick(){
-	
+		scanQRCode()
 	}
 	
 	///  转场动画代理

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tRK-1s-RJf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Code View Controller-->
+        <scene sceneID="Z4W-a0-yYg">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeViewController" id="xI1-9i-yhe" customClass="QRCodeViewController" customModule="TCWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bkH-kc-OOA"/>
+                        <viewControllerLayoutGuide type="bottom" id="a2d-Rh-l55"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bnh-03-3Ww">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMk-Fq-2Wi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="5Va-IP-SNR"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="二维码" image="qrcode_tabbar_icon_qrcode" id="lKm-k8-9QC"/>
+                                    <tabBarItem tag="1" title="条形码" image="qrcode_tabbar_icon_barcode" id="TbW-6V-xai"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Va-IP-SNR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5Va-IP-SNR"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="xI1-9i-yhe" id="LWX-Lt-hKY"/>
+                                </connections>
+                            </tabBar>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-IE-QaP" userLabel="二维码扫描View">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="pPi-DS-KbR" userLabel="动画IV">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-nq-CRe" userLabel="边框IV">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Jvg-nq-CRe" firstAttribute="top" secondItem="aLU-IE-QaP" secondAttribute="top" id="4RZ-fi-CfI"/>
+                                    <constraint firstItem="Jvg-nq-CRe" firstAttribute="leading" secondItem="aLU-IE-QaP" secondAttribute="leading" id="64g-Q8-HLu"/>
+                                    <constraint firstItem="pPi-DS-KbR" firstAttribute="height" secondItem="aLU-IE-QaP" secondAttribute="height" id="ATI-Zx-IXd"/>
+                                    <constraint firstAttribute="height" constant="300" id="HOT-Zp-j4D"/>
+                                    <constraint firstItem="pPi-DS-KbR" firstAttribute="width" secondItem="aLU-IE-QaP" secondAttribute="width" id="Mpn-1e-gGw"/>
+                                    <constraint firstAttribute="width" constant="300" id="UFn-1u-jdm"/>
+                                    <constraint firstItem="pPi-DS-KbR" firstAttribute="centerX" secondItem="aLU-IE-QaP" secondAttribute="centerX" id="a9n-Wj-IRQ"/>
+                                    <constraint firstItem="pPi-DS-KbR" firstAttribute="top" secondItem="aLU-IE-QaP" secondAttribute="top" id="iFp-LO-vRJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jvg-nq-CRe" secondAttribute="trailing" id="mdZ-hS-oqh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jvg-nq-CRe" secondAttribute="bottom" id="se4-eC-cy9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="pPi-DS-KbR"/>
+                                        <exclude reference="Jvg-nq-CRe"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="HOT-Zp-j4D"/>
+                                        <exclude reference="UFn-1u-jdm"/>
+                                        <exclude reference="4RZ-fi-CfI"/>
+                                        <exclude reference="64g-Q8-HLu"/>
+                                        <exclude reference="mdZ-hS-oqh"/>
+                                        <exclude reference="se4-eC-cy9"/>
+                                        <exclude reference="ATI-Zx-IXd"/>
+                                        <exclude reference="Mpn-1e-gGw"/>
+                                        <exclude reference="a9n-Wj-IRQ"/>
+                                        <exclude reference="iFp-LO-vRJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="pPi-DS-KbR"/>
+                                        <include reference="Jvg-nq-CRe"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="HOT-Zp-j4D"/>
+                                        <include reference="UFn-1u-jdm"/>
+                                        <include reference="4RZ-fi-CfI"/>
+                                        <include reference="64g-Q8-HLu"/>
+                                        <include reference="mdZ-hS-oqh"/>
+                                        <include reference="se4-eC-cy9"/>
+                                        <include reference="ATI-Zx-IXd"/>
+                                        <include reference="Mpn-1e-gGw"/>
+                                        <include reference="a9n-Wj-IRQ"/>
+                                        <include reference="iFp-LO-vRJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aLU-IE-QaP" firstAttribute="centerY" secondItem="bnh-03-3Ww" secondAttribute="centerY" id="N2N-Sa-Kg7"/>
+                            <constraint firstItem="jMk-Fq-2Wi" firstAttribute="leading" secondItem="bnh-03-3Ww" secondAttribute="leading" id="U5D-4L-8VV"/>
+                            <constraint firstAttribute="trailing" secondItem="jMk-Fq-2Wi" secondAttribute="trailing" id="Zha-dq-XsE"/>
+                            <constraint firstItem="a2d-Rh-l55" firstAttribute="top" secondItem="jMk-Fq-2Wi" secondAttribute="bottom" id="iPa-RQ-cMR"/>
+                            <constraint firstItem="aLU-IE-QaP" firstAttribute="centerX" secondItem="bnh-03-3Ww" secondAttribute="centerX" id="t0e-yU-tD3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jMk-Fq-2Wi"/>
+                                <exclude reference="aLU-IE-QaP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="iPa-RQ-cMR"/>
+                                <exclude reference="U5D-4L-8VV"/>
+                                <exclude reference="Zha-dq-XsE"/>
+                                <exclude reference="N2N-Sa-Kg7"/>
+                                <exclude reference="t0e-yU-tD3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jMk-Fq-2Wi"/>
+                                <include reference="aLU-IE-QaP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="iPa-RQ-cMR"/>
+                                <include reference="U5D-4L-8VV"/>
+                                <include reference="Zha-dq-XsE"/>
+                                <include reference="N2N-Sa-Kg7"/>
+                                <include reference="t0e-yU-tD3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="GjZ-L4-Vx2">
+                        <barButtonItem key="leftBarButtonItem" title="关闭" id="Spx-F0-UlW">
+                            <connections>
+                                <action selector="onClickNavLeftButton:" destination="xI1-9i-yhe" id="iQE-NH-CsL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="相册" id="FUM-U1-1rm">
+                            <connections>
+                                <action selector="onClickNavRightButton:" destination="xI1-9i-yhe" id="Pq5-mm-lva"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animationIV" destination="pPi-DS-KbR" id="TXp-TD-fLg"/>
+                        <outlet property="animationIVTop" destination="iFp-LO-vRJ" id="rTP-Tz-ZHB"/>
+                        <outlet property="captureViewHeight" destination="HOT-Zp-j4D" id="v1D-WM-kVs"/>
+                        <outlet property="captureViewWidth" destination="UFn-1u-jdm" id="4nf-L7-hMx"/>
+                        <outlet property="tabBar" destination="jMk-Fq-2Wi" id="jRn-y6-AVj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orO-PM-YER" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804.5" y="-9.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ves-cJ-emw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tRK-1s-RJf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="4oV-zN-3io">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xI1-9i-yhe" kind="relationship" relationship="rootViewController" id="ux6-Ou-1oK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIK-2O-Nep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.5" y="-9.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+        <image name="qrcode_tabbar_icon_barcode" width="40" height="40"/>
+        <image name="qrcode_tabbar_icon_qrcode" width="40" height="40"/>
+    </resources>
+</document>
