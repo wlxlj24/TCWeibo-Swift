@@ -29,6 +29,7 @@
 		96D453171CF58C96003B3083 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D453161CF58C96003B3083 /* QRCodeViewController.swift */; };
 		96D453191CF58CA6003B3083 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D453181CF58CA6003B3083 /* QRCode.storyboard */; };
 		96F522FE1CF6F1AC00D905C5 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F522FD1CF6F1AC00D905C5 /* NetworkTools.swift */; };
+		96F523011CF82BDA00D905C5 /* MyQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F523001CF82BDA00D905C5 /* MyQRCodeViewController.swift */; };
 		9F9597C71242D5D29A94A654 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FADAF0CC44414DB249F12F2 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		96D453181CF58CA6003B3083 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		96F522FD1CF6F1AC00D905C5 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		96F522FF1CF6F2D200D905C5 /* Weibo-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weibo-Bridge.h"; sourceTree = "<group>"; };
+		96F523001CF82BDA00D905C5 /* MyQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCodeViewController.swift; sourceTree = "<group>"; };
 		F73979B7ED5DDCBB60292AD2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,8 +272,9 @@
 		96D453151CF58C7F003B3083 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
-				96D453161CF58C96003B3083 /* QRCodeViewController.swift */,
 				96D453181CF58CA6003B3083 /* QRCode.storyboard */,
+				96D453161CF58C96003B3083 /* QRCodeViewController.swift */,
+				96F523001CF82BDA00D905C5 /* MyQRCodeViewController.swift */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				961FAE1F1CF42DE600429120 /* VisitorLoginView.swift in Sources */,
 				96D453071CF54ECB003B3083 /* UIBarButtonItem+Category.swift in Sources */,
 				96B55D4B1CF193DD0093830F /* NullViewController.swift in Sources */,
+				96F523011CF82BDA00D905C5 /* MyQRCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

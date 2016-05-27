@@ -135,7 +135,13 @@ class QRCodeViewController: UIViewController {
 }
 
 extension QRCodeViewController:AVCaptureMetadataOutputObjectsDelegate{
-	
+	// MARK: - 扫描数据代理
+	func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+		
+		for object in metadataObjects {
+			print(object)
+		}
+	}
 }
 
 

@@ -101,9 +101,33 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvB-j7-kBe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iyl-ci-ePI"/>
+                                </constraints>
+                                <state key="normal" title="查看我的二维码">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.43529411764705883" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iyl-ci-ePI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="iyl-ci-ePI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="zWY-i6-aRO" kind="show" id="JlN-Ci-tHv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AvB-j7-kBe" firstAttribute="centerX" secondItem="bnh-03-3Ww" secondAttribute="centerX" id="4T7-AJ-VzO"/>
+                            <constraint firstItem="AvB-j7-kBe" firstAttribute="top" secondItem="aLU-IE-QaP" secondAttribute="bottom" constant="40" id="7CT-1D-l6c"/>
                             <constraint firstItem="aLU-IE-QaP" firstAttribute="centerY" secondItem="bnh-03-3Ww" secondAttribute="centerY" id="N2N-Sa-Kg7"/>
                             <constraint firstItem="jMk-Fq-2Wi" firstAttribute="leading" secondItem="bnh-03-3Ww" secondAttribute="leading" id="U5D-4L-8VV"/>
                             <constraint firstAttribute="trailing" secondItem="jMk-Fq-2Wi" secondAttribute="trailing" id="Zha-dq-XsE"/>
@@ -114,26 +138,32 @@
                             <mask key="subviews">
                                 <exclude reference="jMk-Fq-2Wi"/>
                                 <exclude reference="aLU-IE-QaP"/>
+                                <exclude reference="AvB-j7-kBe"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="iPa-RQ-cMR"/>
-                                <exclude reference="U5D-4L-8VV"/>
-                                <exclude reference="Zha-dq-XsE"/>
                                 <exclude reference="N2N-Sa-Kg7"/>
                                 <exclude reference="t0e-yU-tD3"/>
+                                <exclude reference="4T7-AJ-VzO"/>
+                                <exclude reference="7CT-1D-l6c"/>
+                                <exclude reference="U5D-4L-8VV"/>
+                                <exclude reference="Zha-dq-XsE"/>
+                                <exclude reference="iPa-RQ-cMR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="jMk-Fq-2Wi"/>
                                 <include reference="aLU-IE-QaP"/>
+                                <include reference="AvB-j7-kBe"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="iPa-RQ-cMR"/>
-                                <include reference="U5D-4L-8VV"/>
-                                <include reference="Zha-dq-XsE"/>
                                 <include reference="N2N-Sa-Kg7"/>
                                 <include reference="t0e-yU-tD3"/>
+                                <include reference="4T7-AJ-VzO"/>
+                                <include reference="7CT-1D-l6c"/>
+                                <include reference="U5D-4L-8VV"/>
+                                <include reference="Zha-dq-XsE"/>
+                                <include reference="iPa-RQ-cMR"/>
                             </mask>
                         </variation>
                     </view>
@@ -160,6 +190,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orO-PM-YER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1804.5" y="-9.75"/>
+        </scene>
+        <!--MyQR Code View Controller-->
+        <scene sceneID="e5h-xP-APm">
+            <objects>
+                <viewController id="zWY-i6-aRO" customClass="MyQRCodeViewController" customModule="TCWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KFC-EX-8yd"/>
+                        <viewControllerLayoutGuide type="bottom" id="hZe-c0-LFP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uwd-NW-eWY">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cOo-gV-uDC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7va-KE-v7f"/>
+                                    <constraint firstAttribute="height" constant="300" id="q8j-nc-bJs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7va-KE-v7f"/>
+                                        <exclude reference="q8j-nc-bJs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7va-KE-v7f"/>
+                                        <include reference="q8j-nc-bJs"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cOo-gV-uDC" firstAttribute="centerX" secondItem="Uwd-NW-eWY" secondAttribute="centerX" id="33d-bs-aw6"/>
+                            <constraint firstItem="cOo-gV-uDC" firstAttribute="centerY" secondItem="Uwd-NW-eWY" secondAttribute="centerY" id="LLr-7q-1bt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cOo-gV-uDC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="33d-bs-aw6"/>
+                                <exclude reference="LLr-7q-1bt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cOo-gV-uDC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="33d-bs-aw6"/>
+                                <include reference="LLr-7q-1bt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="QRImageView" destination="cOo-gV-uDC" id="rh2-qB-NyC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Mi-h6-Bq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2553" y="-12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ves-cJ-emw">
