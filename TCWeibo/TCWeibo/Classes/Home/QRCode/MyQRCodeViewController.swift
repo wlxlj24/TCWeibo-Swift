@@ -63,6 +63,7 @@ class MyQRCodeViewController: UIViewController {
 		let outputImage = colorFilter?.outputImage
 		
 		return insertAvatarImage(UIImage(CIImage: outputImage!), avatar: UIImage(named: "avatar_default")!)
+		
 	}
 	
 	/** 插入头像  */
