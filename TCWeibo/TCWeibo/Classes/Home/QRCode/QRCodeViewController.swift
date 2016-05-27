@@ -30,6 +30,9 @@ class QRCodeViewController: UIViewController {
 		tabBar.selectedItem = tabBar.items!.first;
 		//开始动画
 		scanAnimation()
+		setupSession()
+		setupLayer()
+		startScan()
     }
 
     override func didReceiveMemoryWarning() {

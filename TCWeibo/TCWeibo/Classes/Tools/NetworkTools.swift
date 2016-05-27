@@ -13,6 +13,7 @@ class NetworkTools: AFHTTPSessionManager {
 	
 	static var instance: NetworkTools?
 	static var token: dispatch_once_t = 0
+	
 	class func shareNetworkTools() -> NetworkTools {
 		dispatch_once(&token) { () -> Void in
 			self.instance = NetworkTools()
