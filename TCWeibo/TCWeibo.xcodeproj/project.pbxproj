@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		961FAE121CF35CEF00429120 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FAE111CF35CEF00429120 /* BaseTableViewController.swift */; };
 		961FAE1F1CF42DE600429120 /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FAE1E1CF42DE600429120 /* VisitorLoginView.swift */; };
+		9625EC2F1CFC3B1100F10793 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625EC2E1CFC3B1100F10793 /* OAuthViewController.swift */; };
 		96B55D4A1CF193DD0093830F /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B55D481CF193DD0093830F /* MainVCSettings.json */; };
 		96B55D4B1CF193DD0093830F /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B55D491CF193DD0093830F /* NullViewController.swift */; };
 		96C1D0011CF1711000C45693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C1D0001CF1711000C45693 /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 		1EAE5DBB02C9EDB3ABC961C4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		961FAE111CF35CEF00429120 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		961FAE1E1CF42DE600429120 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
+		9625EC2E1CFC3B1100F10793 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		96B55D481CF193DD0093830F /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		96B55D491CF193DD0093830F /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		96C1CFFD1CF1710F00C45693 /* TCWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9625EC2D1CFC3AEB00F10793 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				9625EC2E1CFC3B1100F10793 /* OAuthViewController.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		96B55D471CF193DD0093830F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +199,7 @@
 		96C1D02E1CF1753000C45693 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9625EC2D1CFC3AEB00F10793 /* OAuth */,
 				96F523041CF8397B00D905C5 /* NewFeature */,
 				96C1D0301CF1753000C45693 /* Discover */,
 				96C1D0311CF1753000C45693 /* Home */,
@@ -488,6 +499,7 @@
 				96D453121CF577A4003B3083 /* PopoverPresentationController.swift in Sources */,
 				96C1D0471CF1890E00C45693 /* ProfileTableViewController.swift in Sources */,
 				96C1D0411CF188F400C45693 /* HomeTableViewController.swift in Sources */,
+				9625EC2F1CFC3B1100F10793 /* OAuthViewController.swift in Sources */,
 				961FAE121CF35CEF00429120 /* BaseTableViewController.swift in Sources */,
 				96C1D0011CF1711000C45693 /* AppDelegate.swift in Sources */,
 				96D4530C1CF570F2003B3083 /* PopoverViewController.swift in Sources */,

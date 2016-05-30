@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UITableViewController , VisitorViewDelegate {
 
-	var userLogin = true
+	var userLogin = false
 	
 	//访客登陆视图
 	var visitorView : VisitorLoginView?
@@ -31,8 +31,8 @@ class BaseTableViewController: UITableViewController , VisitorViewDelegate {
 		view = visitorView
 		
 		// 添加导航栏按钮
-		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: "")
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: UIBarButtonItemStyle.Plain, target: self, action: "")
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: "registerBtnWillClick")
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: UIBarButtonItemStyle.Plain, target: self, action: "loginBtnWillClick")
 		
 	}
 	
@@ -42,6 +42,11 @@ class BaseTableViewController: UITableViewController , VisitorViewDelegate {
 	}
 	
 	func loginBtnWillClick() {
+		
+		let oauth = OAuthViewController()
+		let nav = UINavigationController(rootViewController: oauth)
+		
+		presentViewController(nav, animated: true, completion: nil)
 		
 	}
 
