@@ -631,7 +631,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TCBeta.TCWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Guest/Coding/Swift/TCWeibo-Swift/TCWeibo/TCWeibo/Weibo-Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/TailCat/Coding/Swift/TCWeibo-Swift/TCWeibo/TCWeibo/Weibo-Bridge.h";
 			};
 			name = Debug;
 		};
@@ -645,7 +645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TCBeta.TCWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Guest/Coding/Swift/TCWeibo-Swift/TCWeibo/TCWeibo/Weibo-Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/TailCat/Coding/Swift/TCWeibo-Swift/TCWeibo/TCWeibo/Weibo-Bridge.h";
 			};
 			name = Release;
 		};

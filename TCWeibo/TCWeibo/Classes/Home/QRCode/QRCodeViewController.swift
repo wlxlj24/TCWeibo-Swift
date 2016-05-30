@@ -33,6 +33,7 @@ class QRCodeViewController: UIViewController {
 		setupSession()
 		setupLayer()
 		startScan()
+		
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,9 +100,65 @@ class QRCodeViewController: UIViewController {
 	
 	/** 设置图层  */
 	private func setupLayer(){
+
+		drawLayer.frame = view.bounds
+		view.layer.insertSublayer(drawLayer, atIndex: 0)
+		
 		previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
 		previewLayer.frame = view.bounds
 		view.layer.insertSublayer(previewLayer, atIndex: 0)
+
+	}
+	
+	/** 绘制条码形状  */
+	private func drawCornerShape(dataObject:AVMetadataMachineReadableCodeObject){
+		
+		if dataObject.corners.isEmpty {
+			return
+		}
+		
+		let layer = CAShapeLayer()
+		layer.lineWidth = 4
+		layer.strokeColor = UIColor.orangeColor().CGColor
+		layer.fillColor = UIColor.clearColor().CGColor
+		layer.path = cornersPath(dataObject.corners)
+		
+		drawLayer.addSublayer(layer)
+		
+	}
+	
+	private func cornersPath(corners:NSArray) ->CGPathRef {
+		
+		let path = UIBezierPath()
+		var point = CGPoint()
+		
+		// 1. 移动到第一个点
+		var index = 0
+		CGPointMakeWithDictionaryRepresentation((corners[index++] as! CFDictionaryRef), &point)
+		path.moveToPoint(point)
+		
+		// 2. 遍历剩余的点
+		while index < corners.count {
+			CGPointMakeWithDictionaryRepresentation((corners[index++] as! CFDictionaryRef), &point)
+			path.addLineToPoint(point)
+		}
+		
+		// 3. 关闭路径
+		path.closePath()
+		
+		return path.CGPath
+		
+	}
+	
+	/** 清空绘图图层  */
+	private func clearDrawLayer() {
+		if drawLayer.sublayers == nil {
+			return
+		}
+		
+		for layer in drawLayer.sublayers! {
+			layer.removeFromSuperlayer()
+		}
 	}
 	
 	// MARK: - Lazy
@@ -131,6 +188,12 @@ class QRCodeViewController: UIViewController {
 		return AVCaptureVideoPreviewLayer(session: self.session)
 	}()
 	
+	/** 绘制边框图层  */
+	lazy var drawLayer: CALayer = {
+		
+		let layer = CALayer()
+		return layer
+	}()
 	
 }
 
@@ -138,8 +201,11 @@ extension QRCodeViewController:AVCaptureMetadataOutputObjectsDelegate{
 	// MARK: - 扫描数据代理
 	func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
 		
+		clearDrawLayer()
+		
 		for object in metadataObjects {
-			print(object)
+			let dataObject = previewLayer.transformedMetadataObjectForMetadataObject(object as! AVMetadataObject) as! AVMetadataMachineReadableCodeObject
+			drawCornerShape(dataObject)
 		}
 	}
 }
