@@ -13,6 +13,7 @@ class OAuthViewController: UIViewController {
 
 	private let WB_Client_ID = "4128241273"
 	private let WB_Redirect_URL = "http://www.fangyouquan.com"
+	private let WB_Client_Secret = ""
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,17 @@ class OAuthViewController: UIViewController {
 		loadAuthPage()
 		
     }
+	
+	private func loadAccessToken(code: String){
+		
+		let params = ["client_id": WB_Client_ID,
+			"client_secret": WB_Client_Secret,
+			"grant_type": "authorization_code",
+			"code": code,
+			"redirect_uri": WB_Redirect_URL]
+		UserAccount.loadAccessToken(params)
+		
+	}
 	
 	private func loadAuthPage(){
 		let urlString = "https://api.weibo.com/oauth2/authorize?client_id=\(WB_Client_ID)&redirect_uri=\(WB_Redirect_URL)"
@@ -82,6 +94,8 @@ extension OAuthViewController: UIWebViewDelegate {
 			// 授权码
 			let code = query!.substringFromIndex(codeStr.endIndex)
 			print("授权码 " + code)
+			loadAccessToken(code)
+			
 		}else
 		{
 			print("没有未授权Token")

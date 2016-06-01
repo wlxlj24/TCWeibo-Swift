@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9606540D1CFED195000B3ECE /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9606540C1CFED195000B3ECE /* UserAccount.swift */; };
 		961FAE121CF35CEF00429120 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FAE111CF35CEF00429120 /* BaseTableViewController.swift */; };
 		961FAE1F1CF42DE600429120 /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FAE1E1CF42DE600429120 /* VisitorLoginView.swift */; };
 		9625EC2F1CFC3B1100F10793 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625EC2E1CFC3B1100F10793 /* OAuthViewController.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		0FADAF0CC44414DB249F12F2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAE5DBB02C9EDB3ABC961C4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9606540C1CFED195000B3ECE /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		961FAE111CF35CEF00429120 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		961FAE1E1CF42DE600429120 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
 		9625EC2E1CFC3B1100F10793 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 				1EAE5DBB02C9EDB3ABC961C4 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9606540B1CFED17F000B3ECE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9606540C1CFED195000B3ECE /* UserAccount.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9625EC2D1CFC3AEB00F10793 /* OAuth */ = {
@@ -199,6 +209,7 @@
 		96C1D02E1CF1753000C45693 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9606540B1CFED17F000B3ECE /* Model */,
 				9625EC2D1CFC3AEB00F10793 /* OAuth */,
 				96F523041CF8397B00D905C5 /* NewFeature */,
 				96C1D0301CF1753000C45693 /* Discover */,
@@ -515,6 +526,7 @@
 				96D453071CF54ECB003B3083 /* UIBarButtonItem+Category.swift in Sources */,
 				96B55D4B1CF193DD0093830F /* NullViewController.swift in Sources */,
 				96F523011CF82BDA00D905C5 /* MyQRCodeViewController.swift in Sources */,
+				9606540D1CFED195000B3ECE /* UserAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
